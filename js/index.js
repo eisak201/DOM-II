@@ -17,7 +17,7 @@ function checkKeyPress(key){
 }
 
 window.addEventListener('scroll', () =>{
-    const scrolled = window.scrollX;
+    const scrolled = window.scrollY;
 });
 const selectBtn = document.querySelectorAll('.btn').forEach(el =>{
   
@@ -36,7 +36,15 @@ el.addEventListener('focus', ()=>{
   })
 }); 
 
+let topTitle = document.querySelector('.logo-heading')
+topTitle.addEventListener('resize', () =>{
+    topTitle.style.font-size = '40px';
+})
+const navMenu = document.querySelectorAll('.nav-link').forEach(el =>{
 
+    el.addEventListener('focus', ()=>{
+        el.preventDefault();
+    });
 
 
 
